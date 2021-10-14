@@ -33,17 +33,17 @@ fetch(`https://ghibliapi.herokuapp.com/films`)
                 }                 
             }
 
-            // let h3 = document.createElement("h3")
-            // h3.textContent = movieName
-            // display.append(h3)
-
-            // let releaseYear = document.createElement("p")
-            // releaseYear.textContent = releaseDate
-            // display.append(releaseYear)
-
-            // let description = document.querySelector("p")
-            // description.textContent = movieDescription
-            // display.append(description)
+            let form = document.querySelector("form")
+            form.addEventListener("submit", (e) => {
+                e.preventDefault()
+                
+                let ul = document.querySelector("ul")
+                let li = document.createElement("li")
+                
+                ul.append(li)
+                li.innerHTML = `<strong>${movieSelector.value}:</strong> ${e.target['text-input'].value}`
+                e.target.reset()
+            })
 
         })
     })
