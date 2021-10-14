@@ -3,6 +3,7 @@
     width: 75%;
     grid-area: header;
     text-align: center;
+    font-family: monospace;
 }
 
 body {
@@ -31,13 +32,22 @@ img {
 }
 
 #movie-dropdown {
+    font-family: monospace;
     grid-area: dropdown;
+    text-align: center;
 }
 
 #display-info {
     grid-area: display;
+    font-family: monospace;
+    text-align: center;
 }
 
 #text-input {
     grid-area: textArea;
+    text-align: center;
+}
+
+form {
+    text-align: center;
 }
