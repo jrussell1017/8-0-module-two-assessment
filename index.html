@@ -8,22 +8,20 @@
     <link rel="stylesheet" href="style.css">
     <script defer src= "script.js"></script>
 </head>
+<header id="header">
+    <h1>Ghibli Review App</h1>
+    <!-- <img src="./images/ghibli-logo.png" alt="ghibli-logo"> -->
+</header>
 <body>
-       
-        <header id="header">
-            <h1>Studio Ghibli Review App</h1>
-            <!-- <img src="./images/ghibli-logo.png" alt="ghibli-logo"> -->
-        </header>
-       
-       
-            <select name="movie-dropdown" id="movie-dropdown">
+         <select name="movie-dropdown" id="movie-dropdown">
                 <option value="default">Please select a movie!</option>
             </select>
         
         <div id="display-info"></div>
 
         <form>
-            <textarea name="text-input" id="text-input"></textarea>
+            <!-- <textarea name="text-input" id="text-input"></textarea> -->
+            <input type="text" name="text-input" id="text-input">
             <input id="submit-button" type="submit" value="Submit Review">
         </form>
 

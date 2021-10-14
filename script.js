@@ -20,7 +20,6 @@ fetch(`https://ghibliapi.herokuapp.com/films`)
         movieSelector.addEventListener("change", (e) => {
            e.preventDefault()
 
-           
            for(let movie of movies) {
                 let movieName = movie.title
                 let releaseYear = movie.release_date
@@ -33,7 +32,6 @@ fetch(`https://ghibliapi.herokuapp.com/films`)
                     <p id="movie-description">${movieDescription}</p>`   
                 }                 
             }
-            
 
             // let h3 = document.createElement("h3")
             // h3.textContent = movieName
