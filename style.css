@@ -4,15 +4,25 @@
     grid-area: header;
     text-align: center;
     font-family: monospace;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2fr, 1);
+    grid-template-rows: repeat(2fr, 1);
+}
+
+h1 {
+    text-align: right;
+    padding-right: 20px;
 }
 
 body {
     background-color: lavender;
     color: black;
+    text-align: center;
 }
 
 img {
-    width: 250px;
+    width: 350px;
     height: auto;
 }
 
@@ -34,7 +44,7 @@ img {
 #movie-dropdown {
     font-family: monospace;
     grid-area: dropdown;
-    text-align: center;
+    margin-left: 25px;
 }
 
 #display-info {
@@ -50,4 +60,8 @@ img {
 
 form {
     text-align: center;
+}
+
+ul {
+    list-style: none;
 }
