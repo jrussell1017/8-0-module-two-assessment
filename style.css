@@ -2,6 +2,7 @@
     background-color: skyblue;
     width: 75%;
     grid-area: header;
+    text-align: center;
 }
 
 body {
@@ -9,9 +10,14 @@ body {
     color: black;
 }
 
-#main > * {
-    border: 1px solid black;
+img {
+    width: 250px;
+    height: auto;
 }
+
+/* body > * {
+    border: 1px solid black;
+} */
 
 #main {
     display: grid;
