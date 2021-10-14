@@ -1,7 +1,7 @@
 #header {
     background-color: skyblue;
     width: 75%;
-    
+    grid-area: header;
 }
 
 body {
@@ -18,7 +18,8 @@ body {
     grid-template-areas: 
     "header header header header"
     "dropdown dropdown dropdown"
-    "display display display display";
+    "display display display display"
+    "textArea textArea textArea textArea";
     max-width: 800px;
     margin: 0 auto;
 }
@@ -29,4 +30,8 @@ body {
 
 #display-info {
     grid-area: display;
+}
+
+#text-input {
+    grid-area: textArea;
 }
