@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Studio Ghibli Review App</title>
     <link rel="stylesheet" href="style.css">
     <script defer src= "script.js"></script>
 </head>
 <body>
-   <div id="header"></div>
 
+   <div id="main">
+        <div id="header">
+            <h1>Studio Ghibli Review App</h1>
+        </div>
     <div>
         <select name="movie-dropdown" id="movie-dropdown">
             <option value="default">--Please select a movie!--</option>
         </select>
     </div>
-
     <div id="display-info">
 
     </div>
+    <div>
+        <span>
+            Your Review <textarea name="text-input" id="text-input"></textarea>
+            
+            <input type="submit" value="Submit Review">
+        </span>
+    </div>
 
-
-
+    </div>
 </body>
 </html>
