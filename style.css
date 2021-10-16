@@ -1,67 +1,56 @@
-#header {
-    background-color: skyblue;
-    width: 75%;
-    grid-area: header;
-    text-align: center;
-    font-family: monospace;
-    margin: 0 auto;
+header {
     display: grid;
-    grid-template-columns: repeat(2fr, 1);
-    grid-template-rows: repeat(2fr, 1);
+    grid-template-columns: 1fr 1fr;
+    /* width: 75%; */
+    background-color: skyblue;
+    grid-area: header;
 }
 
-h1 {
-    text-align: right;
-    padding-right: 20px;
+header img{
+    width: 375px;
 }
 
 body {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "dropdown ."
+    "displayInfo displayInfo"
+    "review review";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    font-family: monospace;
     background-color: lavender;
-    color: black;
+    width: 75%;
+    margin: 10px auto;
+}
+
+#dropdown {
+    grid-area: dropdown;
     text-align: center;
 }
 
-img {
-    width: 350px;
-    height: auto;
-}
-
-/* body > * {
-    border: 1px solid black;
-} */
-
-#main {
-    display: grid;
-    grid-template-areas: 
-    "header header header header"
-    "dropdown dropdown dropdown"
-    "display display display display"
-    "textArea textArea textArea textArea";
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#movie-dropdown {
-    font-family: monospace;
-    grid-area: dropdown;
-    margin-left: 25px;
+#dropdown select {
+    width: 200px;
 }
 
 #display-info {
-    grid-area: display;
-    font-family: monospace;
-    text-align: center;
+    grid-area: displayInfo;
+    min-height: 50px;
 }
 
-#text-input {
-    grid-area: textArea;
-    text-align: center;
+#review {
+    grid-area: review;
+    margin: 0 auto;
+
 }
 
-form {
-    text-align: center;
+#review input[type="submit"] {
+    width: 200px;
 }
 
-ul {
-    list-style: none;
+#dropdown, 
+#display-info, 
+#review {
+    padding: 10px;
 }

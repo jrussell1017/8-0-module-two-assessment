@@ -1,11 +1,12 @@
-let movieSelector = document.querySelector("#movie-dropdown");
-let display = document.querySelector("#display-info");
+let section = document.querySelector("#display-info");
 
 fetch(`https://ghibliapi.herokuapp.com/films`).then((res) => {
   return res
     .json()
     .then((movies) => {
       console.log(movies);
+
+      let movieSelector = document.querySelector("#dropdown");
 
       for (let movie of movies) {
         let option = document.createElement("option");
@@ -23,20 +24,18 @@ fetch(`https://ghibliapi.herokuapp.com/films`).then((res) => {
           let movieDescription = movie.description;
 
           if (e.target.value === movieName) {
-            display.innerHTML = `<h3 id="movie-name">${movieName}</h2>
+            section.innerHTML = `<h3 id="movie-name">${movieName}</h3>
                     <p id="release-year">${releaseYear}</p>
                     <p id="movie-description">${movieDescription}</p>`;
           }
         }
-
-    });
-        let form = document.querySelector("form");
-        form.addEventListener("submit", (e) => {
+      });
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         let ul = document.querySelector("ul");
         let li = document.createElement("li");
-
         li.innerHTML = `<strong>${movieSelector.value}:</strong> ${e.target["text-input"].value}`;
         ul.append(li);
         e.target.reset();
